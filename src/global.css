@@ -1,0 +1,94 @@
+html,
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: var(--body-bg, #fff);
+  color: var(--body-text, #000);
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  color: var(--headers-text, #000);
+}
+
+h1,
+.h1 {
+  font-size: var(--h1-size, var(--text-3xl, 1.875rem));
+  color: var(--h1-text, var(--headers-text, #000));
+}
+
+h2,
+.h2 {
+  font-size: var(--h2-size, var(--text-2xl, 1.5rem));
+  color: var(--h2-text, var(--headers-text, #000));
+}
+
+h3,
+.h3 {
+  font-size: var(--h3-size, var(--text-xl, 1.25rem));
+  color: var(--h3-text, var(--headers-text, #000));
+}
+
+h4,
+.h4 {
+  font-size: var(--h4-size, var(--text-lg, 1.125rem));
+  color: var(--h4-text, var(--headers-text, #000));
+}
+
+h5,
+.h5 {
+  font-size: var(--h5-size, var(--text-base, 1rem));
+  color: var(--h5-text, var(--headers-text, #000));
+}
+
+h6,
+.h6 {
+  font-size: var(--h6-size, var(--text-sm, 0.875rem));
+  color: var(--h6-text, var(--headers-text, #000));
+}
+
+button {
+  background-color: var(--button-bg, #9c6644);
+  border-radius: var(--button-radius, 8px);
+  border-style: none;
+  color: var(--button-text, #fff);
+  cursor: pointer;
+  display: inline-block;
+  font-size: var(--button-text-size, var(--text-sm, 0.875rem));
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  line-height: 20px;
+  outline: none;
+  padding: 10px 16px;
+  transition: opacity 300ms ease-in-out;
+  margin: 4px;
+}
+
+button:hover,
+button[data-state="hover"] {
+  opacity: 0.5;
+}
+
+button:focus,
+button[data-state="focus"] {
+  background-color: var(--button-bg, #9c6644);
+  box-shadow: 0 0 0 2px var(--body-bg, #fff),
+    0 0 0 4px var(--button-bg, #9c6644);
+}
+
+button:active,
+button[data-state="active"] {
+  opacity: 1;
+}
