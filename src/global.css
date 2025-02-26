@@ -58,41 +58,6 @@ h6,
   color: var(--h6-text, var(--headers-text, #000));
 }
 
-button {
-  background-color: var(--button-bg, #9c6644);
-  border-radius: var(--button-radius, 8px);
-  border-style: none;
-  color: var(--button-text, #fff);
-  cursor: pointer;
-  display: inline-block;
-  font-size: var(--button-text-size, var(--text-sm, 0.875rem));
-  font-weight: 500;
-  height: 40px;
-  line-height: 20px;
-  line-height: 20px;
-  outline: none;
-  padding: 10px 16px;
-  transition: opacity 300ms ease-in-out;
-  margin: 4px;
-}
-
-button:hover,
-button[data-state="hover"] {
-  opacity: 0.5;
-}
-
-button:focus,
-button[data-state="focus"] {
-  background-color: var(--button-bg, #9c6644);
-  box-shadow: 0 0 0 2px var(--body-bg, #fff),
-    0 0 0 4px var(--button-bg, #9c6644);
-}
-
-button:active,
-button[data-state="active"] {
-  opacity: 1;
-}
-
 a {
   color: var(--link-text, #9c6644);
   transition: opacity 300ms ease-in-out;

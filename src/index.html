@@ -7,6 +7,7 @@
     <script src="./config.js"></script>
     <link rel="stylesheet" href="./reset.css" />
     <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./buttons.css" />
   </head>
   <body>
     <h1>Header 1</h1>
@@ -16,10 +17,32 @@
     <h5>Header 5</h5>
     <h6>Header 6</h6>
     <div>
+      <h2>Primary</h2>
       <button>Click me</button>
       <button data-state="hover">Hovered</button>
       <button data-state="focus">Focused</button>
       <button data-state="active">Active</button>
+    </div>
+    <div>
+      <h2>Secondary</h2>
+      <button data-variant="secondary">Click me</button>
+      <button data-variant="secondary" data-state="hover">Hovered</button>
+      <button data-variant="secondary" data-state="focus">Focused</button>
+      <button data-variant="secondary" data-state="active">Active</button>
+    </div>
+    <div>
+      <h2>Danger</h2>
+      <button data-variant="danger">Click me</button>
+      <button data-variant="danger" data-state="hover">Hovered</button>
+      <button data-variant="danger" data-state="focus">Focused</button>
+      <button data-variant="danger" data-state="active">Active</button>
+    </div>
+    <div>
+      <h2>Success</h2>
+      <button data-variant="success">Click me</button>
+      <button data-variant="success" data-state="hover">Hovered</button>
+      <button data-variant="success" data-state="focus">Focused</button>
+      <button data-variant="success" data-state="active">Active</button>
     </div>
     <div>
       <a href="#">Link text</a>
@@ -66,5 +89,16 @@
       voluptatem quis ipsam adipisci doloribus inventore modi labore. Ipsam,
       aspernatur!
     </p>
+    <div>
+      <h2 class="h6">Deactivate account</h2>
+      <p>
+        Are you sure you want to deactivate your account? All of your data will
+        be permanently removed. This action cannot be undone.
+      </p>
+      <div>
+        <button type="button" data-variant="secondary">Cancel</button>
+        <button type="button" data-variant="danger">Deactivate</button>
+      </div>
+    </div>
   </body>
 </html>
