@@ -92,3 +92,18 @@ button:active,
 button[data-state="active"] {
   opacity: 1;
 }
+
+a {
+  color: var(--link-text, #9c6644);
+  transition: opacity 300ms ease-in-out;
+}
+
+a:hover,
+a[data-state="hover"] {
+  opacity: 0.5;
+}
+
+a:active,
+a[data-state="active"] {
+  opacity: 1;
+}
