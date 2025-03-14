@@ -1,0 +1,23 @@
+{
+  "name": "@martendebruijn/css",
+  "version": "1.0.0",
+  "description": "Quickly add styling to your project!",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "postcss src/main.css -o dist/styles.css"
+  },
+  "keywords": [
+    "css"
+  ],
+  "author": "Marten de Bruijn <martendebruijn@outlook.com> (https://github.com/martendebruijn)",
+  "license": "MIT",
+  "type": "commonjs",
+  "devDependencies": {
+    "postcss": "^8.5.3",
+    "postcss-cli": "^11.0.1",
+    "postcss-import": "^16.1.0"
+  }
+}
