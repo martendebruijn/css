@@ -41,6 +41,45 @@ h1, h2, h3, h4, h5, h6 {
 }
 body {
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  color: var(--body-color, #000);
+  color: var(--body-text, #000);
   background-color: var(--body-bg, #f1f5f9);
+}
+button {
+  appearance: none;
+  border: none;
+  border-radius: var(--button-rounded, 6px);
+  color: var(--button-text, #fff);
+  background-color: var(--button-bg, #000);
+  cursor: pointer;
+  padding: 10px 15px;
+  font-size: 0.875rem;
+  line-height: calc(1.25 / 0.875);
+  margin: 8px;
+}
+button:hover,
+button[data-state="hover"] {
+  opacity: 0.75;
+}
+button:focus,
+button[data-state="focus"] {
+  opacity: 0.75;
+  box-shadow: 0 0 0 4px var(--body-bg, #fff), 0 0 0 8px var(--button-ring, #000);
+}
+.flex {
+  display: flex;
+}
+.inline-flex {
+  display: inline-flex;
+}
+.flex-row {
+  flex-direction: row;
+}
+.flex-col {
+  flex-direction: column;
+}
+.flex-row-reverse {
+  flex-direction: row-reverse;
+}
+.flex-col-reverse {
+  flex-direction: column-reverse;
 }
