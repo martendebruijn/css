@@ -1,7 +1,7 @@
 {
   "name": "@martendebruijn/css",
-  "version": "1.0.0",
-  "description": "Quickly add styling to your project!",
+  "version": "1.0.1",
+  "description": "Add some basic styling to native HTML elements for quick prototyping",
   "files": [
     "dist"
   ],
