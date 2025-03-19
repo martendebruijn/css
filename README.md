@@ -1,6 +1,6 @@
 # @martendebruijn/css
 
-Quickly add styling to your project!
+Add some basic styling to native HTML elements for quick prototyping.
 
 ## Get started
 
