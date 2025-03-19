@@ -1,4 +1,6 @@
 button {
+  --font-size: 0.875rem;
+
   appearance: none;
   border: none;
   border-radius: var(--button-rounded, 6px);
@@ -6,8 +8,8 @@ button {
   background-color: var(--button-bg, #000);
   cursor: pointer;
   padding: 10px 15px;
-  font-size: 0.875rem;
-  line-height: calc(1.25 / 0.875);
+  font-size: var(--font-size);
+  line-height: calc(1.25 / var(--font-size));
   margin: 8px;
 }
 
@@ -18,6 +20,6 @@ button[data-state="hover"] {
 
 button:focus,
 button[data-state="focus"] {
-  opacity: 0.75;
-  box-shadow: 0 0 0 4px var(--body-bg, #fff), 0 0 0 8px var(--button-ring, #000);
+  outline: 4px solid var(--button-bg, #000);
+  outline-offset: 2px;
 }
