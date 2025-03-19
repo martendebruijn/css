@@ -1,0 +1,21 @@
+body > header {
+  display: flex;
+  background-color: var(--body-text, #000);
+  margin: -1rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+body > header a {
+  color: var(--body-bg, #fff);
+  text-decoration: none;
+}
+
+body > header > nav > ul {
+  display: flex;
+  gap: 2.5rem;
+}
+
+body > header > nav > ul > li {
+  list-style: none;
+}
