@@ -1,0 +1,10 @@
+header {
+  margin: -1rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  min-height: 30rem;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  background-color: var(--hero-bg, #b7b1f2);
+}

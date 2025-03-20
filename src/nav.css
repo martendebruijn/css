@@ -1,21 +1,34 @@
-body > header {
+body > nav {
   display: flex;
-  background-color: var(--body-text, #000);
+  background-color: var(--body-bg, #fff);
   margin: -1rem;
   margin-bottom: 1rem;
   padding: 1rem;
 }
 
-body > header a {
-  color: var(--body-bg, #fff);
+body > nav a {
+  color: var(--body-text, #000);
   text-decoration: none;
 }
 
-body > header > nav > ul {
+body > nav > ul {
   display: flex;
   gap: 2.5rem;
 }
 
-body > header > nav > ul > li {
+body > nav > ul > li {
   list-style: none;
+}
+
+body > nav > a:first-of-type {
+  font-weight: 600;
+}
+
+a[aria-current="page"] {
+  font-weight: 600;
+  color: var(--anchor-active, #1e22ff);
+}
+
+a {
+  color: var(--anchor-active, #1e22ff);
 }
