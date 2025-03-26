@@ -3,7 +3,7 @@ body {
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   color: var(--body-text, #000);
   background-color: var(--body-bg, #f1f5f9);
-  overflow-x: clip;
+  overflow-x: hidden;
   max-width: 100vw;
 }
 
