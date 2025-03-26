@@ -1,9 +1,19 @@
 body > nav {
   display: flex;
+  align-items: center;
   background-color: var(--body-bg, #fff);
-  margin: -1rem;
-  margin-bottom: 1rem;
+  max-width: 100vw;
+  width: 100vw;
+  margin: calc(var(--body-padding, 0.5rem) * -1);
   padding: 1rem;
+  z-index: 10;
+  position: relative;
+}
+
+@media (width >= 40rem) {
+  body > nav {
+    margin: calc(var(--body-padding-sm, 1rem) * -1);
+  }
 }
 
 body > nav a {
@@ -12,8 +22,14 @@ body > nav a {
 }
 
 body > nav > ul {
-  display: flex;
+  display: none;
   gap: 2.5rem;
+}
+
+@media (width >= 40rem) {
+  body > nav > ul {
+    display: flex;
+  }
 }
 
 body > nav > ul > li {
@@ -26,9 +42,10 @@ body > nav > a:first-of-type {
 
 a[aria-current="page"] {
   font-weight: 600;
-  color: var(--anchor-active, #1e22ff);
+  color: var(--anchor-active, var(--primary-color, #1e22ff));
 }
 
 a {
-  color: var(--anchor-active, #1e22ff);
+  white-space: nowrap;
+  color: var(--anchor-active, var(--primary-color, #1e22ff));
 }

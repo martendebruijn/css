@@ -5,7 +5,7 @@ button {
   border: none;
   border-radius: var(--button-rounded, 6px);
   color: var(--button-text, #fff);
-  background-color: var(--button-bg, #1e22ff);
+  background-color: var(--button-bg, var(--primary-color, #1e22ff));
   font-weight: 600;
   cursor: pointer;
   padding: 10px 15px;
@@ -21,6 +21,6 @@ button[data-state="hover"] {
 
 button:focus,
 button[data-state="focus"] {
-  outline: 4px solid var(--button-bg, #1e22ff);
+  outline: 4px solid var(--button-bg, var(--primary-color, #1e22ff));
   outline-offset: 2px;
 }
