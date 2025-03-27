@@ -6,11 +6,27 @@ function isArray<T>(x: T): x is T extends unknown[] ? T : never {
   return Array.isArray(x);
 }
 
-function arrayToCssValue(array: string[]): string {
-  const mapped = array.map((value) => {
-    return value.includes(" ") ? `"${value}"` : value;
+function hasSpace(value: string): boolean {
+  return value.includes(" ");
+}
+
+function generateCssValue(value: string): string {
+  return hasSpace(value) ? `"${value}"` : value;
+}
+
+function addComma(values: string[]): string {
+  return values.join(", ");
+}
+
+function mapCssValues(array: string[]): string[] {
+  return array.map((value) => {
+    return generateCssValue(value);
   });
-  const joined = mapped.join(", ");
+}
+
+function arrayToCssValue(array: string[]): string {
+  const mapped = mapCssValues(array);
+  const joined = addComma(mapped);
 
   return joined;
 }
@@ -27,14 +43,24 @@ function withSpace(input: string): string {
   return `  ${input}`;
 }
 
+function generateProperties(value: any, property: string, cssOutput = "") {
+  if (isArray(value)) {
+    cssOutput += withSpace(cssProperty(property, arrayToCssValue(value)));
+  } else {
+    cssOutput += withSpace(cssProperty(property, value));
+  }
+
+  return cssOutput;
+}
+
+function entries<T>(object: Record<string, T>): [string, T][] {
+  return Object.entries(object);
+}
+
 function convertProperties(styles: Record<string, any>): string {
   let cssOutput = "";
-  for (const [property, value] of Object.entries(styles)) {
-    if (isArray(value)) {
-      cssOutput += withSpace(cssProperty(property, arrayToCssValue(value)));
-    } else {
-      cssOutput += withSpace(cssProperty(property, value));
-    }
+  for (const [property, value] of entries(styles)) {
+    generateProperties(value, property, cssOutput);
   }
   return cssOutput;
 }
@@ -47,14 +73,24 @@ function createEndTag() {
   return `}\n`;
 }
 
+function generateCss(
+  selector: string,
+  styles: unknown,
+  cssOutput = ""
+): string {
+  cssOutput += createSelector(selector);
+  cssOutput += convertProperties(styles as Record<string, any>);
+  cssOutput += createEndTag();
+
+  return cssOutput;
+}
+
 function tomlToCss(tomlInput: string): string {
   const parsedToml = parseToml(tomlInput);
   let cssOutput = "";
 
-  for (const [selector, styles] of Object.entries(parsedToml)) {
-    cssOutput += createSelector(selector);
-    cssOutput += convertProperties(styles as Record<string, any>);
-    cssOutput += createEndTag();
+  for (const [selector, styles] of entries(parsedToml)) {
+    generateCss(selector, styles, cssOutput);
   }
 
   return cssOutput;
