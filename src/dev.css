@@ -1,27 +1,19 @@
 body {
   background-color: hotpink;
-}
 
-@media (width >= 40rem) {
-  body {
+  @media (width >= 40rem) {
     background-color: brown;
   }
-}
 
-@media (width >= 48rem) {
-  body {
+  @media (width >= 48rem) {
     background-color: brown;
   }
-}
 
-@media (width >= 1024rem) {
-  body {
+  @media (width >= 1024rem) {
     background-color: blue;
   }
-}
 
-@media (width >= 1280rem) {
-  body {
+  @media (width >= 1280rem) {
     background-color: red;
   }
 }

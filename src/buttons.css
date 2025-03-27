@@ -12,15 +12,15 @@ button {
   font-size: var(--font-size);
   line-height: calc(1.25 / var(--font-size));
   margin: 8px;
-}
 
-button:hover,
-button[data-state="hover"] {
-  opacity: 0.75;
-}
+  &:hover,
+  &[data-state="hover"] {
+    opacity: 0.75;
+  }
 
-button:focus,
-button[data-state="focus"] {
-  outline: 4px solid var(--button-bg, var(--primary-color, #1e22ff));
-  outline-offset: 2px;
+  &:focus,
+  &[data-state="focus"] {
+    outline: 4px solid var(--button-bg, var(--primary-color, #1e22ff));
+    outline-offset: 2px;
+  }
 }

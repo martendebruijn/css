@@ -1,7 +1,9 @@
-body > footer {
-  margin: -1rem;
-  margin-top: 1rem;
-  padding: 1rem;
-  background-color: var(--body-bg, #fff);
-  color: var(--body-text, #000);
+body {
+  > footer {
+    margin: -1rem;
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: var(--body-bg, #fff);
+    color: var(--body-text, #000);
+  }
 }
