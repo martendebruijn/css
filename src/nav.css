@@ -1,3 +1,8 @@
+a {
+  white-space: nowrap;
+  color: var(--anchor-active, var(--primary-color, #1e22ff));
+}
+
 body > nav {
   display: flex;
   align-items: center;
@@ -42,10 +47,5 @@ body > nav > a:first-of-type {
 
 a[aria-current="page"] {
   font-weight: 600;
-  color: var(--anchor-active, var(--primary-color, #1e22ff));
-}
-
-a {
-  white-space: nowrap;
   color: var(--anchor-active, var(--primary-color, #1e22ff));
 }

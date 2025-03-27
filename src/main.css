@@ -1,9 +1,10 @@
-@import "reset.css";
-@import "global.css";
-@import "buttons.css";
-@import "typography.css";
-@import "images.css";
-@import "nav.css";
-@import "footer.css";
-@import "hero.css";
+@import url("reset.css");
+@import url("global.css");
+@import url("buttons.css");
+@import url("typography.css");
+@import url("images.css");
+@import url("nav.css");
+@import url("footer.css");
+@import url("hero.css");
+
 /* @import "dev.css"; */
