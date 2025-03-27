@@ -1,5 +1,5 @@
 # Ignore dist directory
-dist
+dist/**/*
 
 # Ignore styles.css in the test directory because it will be build in the pipeline
 test/styles.css
