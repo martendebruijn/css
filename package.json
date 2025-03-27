@@ -10,20 +10,26 @@
     "watch": "postcss src/main.css -o test/styles.css --watch",
     "build": "postcss src/main.css -o dist/styles.css",
     "docs": "postcss src/main.css -o test/styles.css",
-    "lint": "stylelint 'src/**/*.css'"
+    "lint": "stylelint 'src/**/*.css'",
+    "config": "tsc && node ./src/buildVariables.js"
   },
   "keywords": [
     "css"
   ],
   "author": "Marten de Bruijn <martendebruijn@outlook.com> (https://github.com/martendebruijn)",
   "license": "MIT",
-  "type": "commonjs",
+  "type": "module",
   "devDependencies": {
+    "@martendebruijn/types": "^2.1.0",
+    "@types/node": "^22.13.14",
     "cssnano": "^7.0.6",
     "postcss": "^8.5.3",
     "postcss-cli": "^11.0.1",
     "postcss-import": "^16.1.0",
     "stylelint": "^16.17.0",
     "stylelint-config-standard": "^37.0.0"
+  },
+  "dependencies": {
+    "toml": "^3.0.0"
   }
 }

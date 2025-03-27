@@ -3,6 +3,7 @@
     "stylelint.vscode-stylelint",
     "esbenp.prettier-vscode",
     "pflannery.vscode-versionlens",
-    "ritwickdey.liveserver"
+    "ritwickdey.liveserver",
+    "tamasfe.even-better-toml"
   ]
 }
